@@ -1,90 +1,37 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+//a
+// import { useState } from "react";
+import Button from "../../components/ui/botton";
 
 const Navbar = () => {
-    const [menuOpen, setMenuOpen] = useState(false);
+   
+    //const [isOpen, setIsOpen] = useState(false)
 
     return (
-        <header className="bg-gray-800 shadow-md">
-            <nav className="container mx-auto px-6 py-3">
-                <div className="flex items-center justify-between">
-                    {/* Logo */}
-                    <div className="text-white font-bold text-xl">
-                        <Link to="/">Logo</Link>
-                    </div>
-
-                    {/* Desktop Menu */}
-                    <div className="hidden md:flex">
-                        <ul className="flex items-center space-x-6">
-                            <li>
-                                <Link 
-                                    to="/" 
-                                    className="text-white hover:text-indigo-400 transition-colors duration-200"
-                                >
-                                    Catálogos
-                                </Link>
-                            </li>
-                            <li>
-                                <Link 
-                                    to="/create-product" 
-                                    className="text-white hover:text-indigo-400 transition-colors duration-200"
-                                >
-                                    Registrar producto
-                                </Link>
-                            </li>
-                        </ul>
-                    </div>
-
-                    {/* Mobile Menu Button */}
-                    <div className="md:hidden">
-                        <button
-                            onClick={() => setMenuOpen(!menuOpen)}
-                            className="outline-none mobile-menu-button"
-                            aria-expanded={menuOpen}
-                            aria-label="Toggle menu"
-                        >
-                            <svg
-                                className="w-6 h-6 text-white"
-                                fill="none"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth="2"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                            >
-                                {menuOpen ? (
-                                    <path d="M6 18L18 6M6 6l12 12" />
-                                ) : (
-                                    <path d="M4 6h16M4 12h16M4 18h16" />
-                                )}
-                            </svg>
-                        </button>
-                    </div>
+        <nav className="bg-[#E6F4F1] px-4 py-2">
+          <div className="max-w-7xl mx-auto flex justify-between items-center">
+            <div className="flex items-center">
+              <Link to="/" className="text-2xl font-bold">
+                <div className="w-16 h-16 bg-gray-200 flex items-center justify-center">
+                  LOGO
                 </div>
-
-                {/* Mobile Menu */}
-                <div className={`${menuOpen ? "block" : "hidden"} md:hidden mt-4`}>
-                    <ul className="space-y-4">
-                        <li>
-                            <Link
-                                to="/"
-                                className="block text-white hover:text-indigo-400 transition-colors duration-200"
-                            >
-                                Catálogos
-                            </Link>
-                        </li>
-                        <li>
-                            <Link
-                                to="/create-product"
-                                className="block text-white hover:text-indigo-400 transition-colors duration-200"
-                            >
-                                Registrar producto
-                            </Link>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
+              </Link>
+              <div className="hidden md:flex items-center space-x-4 ml-8">
+                <Link to="/" className="text-gray-700 hover:text-gray-900">Inicio</Link>
+                <Link to="/somos" className="text-gray-700 hover:text-gray-900">¿Quienes somos?</Link>
+                <Link to="/servicios" className="text-gray-700 hover:text-gray-900">Servicios</Link>
+              </div>
+            </div>
+            <div className="hidden md:flex items-center space-x-4">
+              <Button variant="outline" asChild>
+                <Link to="/registro">Registrarse</Link>
+              </Button>
+              <Button variant="default" className="bg-[#1e3a8a] hover:bg-[#1e3a8a]/90" asChild>
+                <Link to="/login">Iniciar Sesión</Link>
+              </Button>
+            </div>
+          </div>
+        </nav>
     );
 };
 

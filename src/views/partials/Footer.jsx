@@ -1,35 +1,22 @@
+import Button from "../../components/ui/botton";
 const Footer = () => {
     return (
-        <footer className="bg-gray-800 border-t border-gray-700">
-            <div className="container mx-auto px-6 py-8">
-                <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
-                    {/* Copyright */}
-                    <p className="text-sm text-gray-400 text-center md:text-left">
-                        © 2019-2021 All Rights Reserved.
-                    </p>
-
-                    {/* Links */}
-                    <ul className="flex space-x-6 text-sm text-gray-400">
-                        <li>
-                            <a
-                                href="#terms"
-                                className="hover:text-white transition-colors duration-200"
-                            >
-                                Terms of Service
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                href="#privacy"
-                                className="hover:text-white transition-colors duration-200"
-                            >
-                                Privacy Policy
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+        <footer className="bg-[#E6F4F1] py-8">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="flex justify-between items-center">
+            <p className="text-xl">
+              La forma más simple<br />
+              de cuidar de ti.
+            </p>
+            <div className="space-x-4">
+              <Button variant="outline">Contáctanos</Button>
+              <Button className="bg-[#1e3a8a] hover:bg-[#1e3a8a]/90">
+                Más Información
+              </Button>
             </div>
-        </footer>
+          </div>
+        </div>
+      </footer>
     );
 };
 
