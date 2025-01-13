@@ -11,7 +11,7 @@ import { useToastStore } from "../../../../store/toast.store.js";
 import { useLoaderStore } from "../../../../store/loader.store.js";
 
 import CryptoJS from 'crypto-js';
-const SECRET_TOKEN = import.meta.env.VITE_REACT_APP_SECRET_TOKEN;
+const SECRET_TOKEN =  process.env.REACT_APP_API_URL;
 
 const encryptToken = (data) => {
     const ciphertext = CryptoJS.AES.encrypt(JSON.stringify(data), SECRET_TOKEN);

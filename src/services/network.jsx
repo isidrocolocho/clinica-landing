@@ -2,7 +2,7 @@ import axios from "axios";
 import {statusHandlers} from './statusHandlers.js';
 import {useAuthStore} from "../views/client/auth/store/auth.store.js";
 
-const baseURL = import.meta.env.VITE_REACT_APP_API_URL;
+const baseURL =  process.env.REACT_APP_API_URLL;
 
 const createAxiosInstance = () => {
     const config = {
