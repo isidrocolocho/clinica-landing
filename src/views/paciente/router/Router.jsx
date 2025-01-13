@@ -1,6 +1,6 @@
 import {lazy} from "react";
 
-export const routesMedico = [
+export const routesPaciente = [
     {
         path: "calendario",
         name: "Calendario",
@@ -71,5 +71,6 @@ export const routesMedico = [
             show: false,
             canAccess: true,
         },
+        Component: lazy(async () => await import("../../NoEncontrado")),
     }
 ];

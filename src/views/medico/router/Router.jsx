@@ -71,5 +71,6 @@ export const routesMedico = [
             show: false,
             canAccess: true,
         },
+        Component: lazy(async () => await import("../../NoEncontrado")),
     }
 ];

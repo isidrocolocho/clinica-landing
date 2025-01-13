@@ -1,13 +1,21 @@
-import { BrowserRouter } from "react-router-dom";
-import RouterApp from './router/Router';
+import { BrowserRouter, Routes } from "react-router-dom";
+//import RouterApp from './router/Router';
+import {renderRoutesGlobal, routes} from "./router/Router";
+import ToastComponent from "./components/core/ToastComponent";
+import Loader from "./components/core/LoaderComponent";
 
 function App() {
   return (
-    <div className="App">
-      <BrowserRouter>
-        <RouterApp/>
-      </BrowserRouter> 
-    </div>
+    <>
+            <Loader/>
+            <ToastComponent/>
+            <BrowserRouter>
+                <Routes>
+                    {renderRoutesGlobal(routes)}
+                </Routes>
+            </BrowserRouter>
+            
+        </>
   );
 }
 
