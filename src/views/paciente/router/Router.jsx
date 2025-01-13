@@ -2,64 +2,64 @@ import {lazy} from "react";
 
 export const routesMedico = [
     {
-        path: "dashboard",
-        name: "Inicio",
+        path: "calendario",
+        name: "Calendario",
         meta: {
-            title: "Panel administrador",
+            title: "Calendario",
             icon: "dashboard",
             requiresAuth: true,
             show: true,
             canAccess: ["VER_DASHBOARD"],
         },
-        Component: lazy(async () => await import("@/modules/admin/home/pages/DashboardAdmin.tsx")),
+        Component: lazy(async () => await import("../Calendario/Calendario")),
+    },
+    {
+        path: "catalogo",
+        name: "Catalogo",
+        meta: {
+            title: "Catalogo de medico",
+            icon: "dashboard",
+            requiresAuth: true,
+            show: true,
+            canAccess: ["VER_DASHBOARD"],
+        },
+        Component: lazy(async () => await import("../Catalogo/Catalogo")),
+    },
+    {
+        path: "citas-anteriores",
+        name: "CitasAnteriores",
+        meta: {
+            title: "Citas Atendidas",
+            icon: "dashboard",
+            requiresAuth: true,
+            show: true,
+            canAccess: ["VER_DASHBOARD"],
+        },
+        Component: lazy(async () => await import("../Citas/CitasAnteriores")),
+    },
+    {
+        path: "crear-citas",
+        name: "CrearCitas",
+        meta: {
+            title: "Crear Citas",
+            icon: "dashboard",
+            requiresAuth: true,
+            show: false,
+            canAccess: ["VER_DASHBOARD"],
+        },
+        Component: lazy(async () => await import("../Citas/CrearCitas")),
     },
     {
         path: "perfil",
         name: "Perfil",
         meta: {
-            title: "Perfil de medico",
+            title: "Perfil",
             icon: "dashboard",
             requiresAuth: true,
             show: false,
             canAccess: ["VER_DASHBOARD"],
         },
-        Component: lazy(async () => await import("../medico/perfil/perfil")),
-    },
-    {
-        path: "proximas-citas",
-        name: "ProximasCitas",
-        meta: {
-            title: "Proximas citas de medico",
-            icon: "dashboard",
-            requiresAuth: true,
-            show: false,
-            canAccess: ["VER_DASHBOARD"],
-        },
-        Component: lazy(async () => await import("../medico/citas/proximasCitas")),
-    },
-    {
-        path: "citas-atendidas",
-        name: "CitasAtendidas",
-        meta: {
-            title: "Citas Atendidas de medico",
-            icon: "dashboard",
-            requiresAuth: true,
-            show: false,
-            canAccess: ["VER_DASHBOARD"],
-        },
-        Component: lazy(async () => await import("../medico/citas/citasAtendidas")),
-    },
-    {
-        path: "calificacion",
-        name: "Calificaciones",
-        meta: {
-            title: "Calificaciones de medico",
-            icon: "dashboard",
-            requiresAuth: true,
-            show: false,
-            canAccess: ["VER_DASHBOARD"],
-        },
-        Component: lazy(async () => await import("../medico/calificacion/calificacion")),
+        Component: lazy(async () => await import("../perfil/perfil")),
     },
     {
         path: "*",
@@ -69,7 +69,7 @@ export const routesMedico = [
             icon: "error",
             requiresAuth: true,
             show: false,
-            canAccess: ["VER_DASHBOARD"],
+            canAccess: true,
         },
     }
 ];
