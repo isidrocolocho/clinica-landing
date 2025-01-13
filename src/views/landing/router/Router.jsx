@@ -2,7 +2,7 @@ import {lazy} from "react";
 
 export const routesLanding = [
     {
-        path: "home",
+        path: "",
         name: "Inicio",
         icon: "dashboard",
         Component: lazy(async () => await import("../home/Home")),

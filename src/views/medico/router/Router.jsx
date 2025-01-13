@@ -7,7 +7,7 @@ export const routesMedico = [
         meta: {
             title: "Panel administrador",
             icon: "dashboard",
-            requiresAuth: true,
+            requiresAuth: false,
             show: true,
             canAccess: ["VER_DASHBOARD"],
         },
@@ -71,5 +71,6 @@ export const routesMedico = [
             show: false,
             canAccess: true,
         },
+        Component: lazy(async () => await import("../../NoEncontrado")),
     }
 ];
