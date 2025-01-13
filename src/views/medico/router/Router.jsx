@@ -7,7 +7,7 @@ export const routesMedico = [
         meta: {
             title: "Panel administrador",
             icon: "dashboard",
-            requiresAuth: true,
+            requiresAuth: false,
             show: true,
             canAccess: ["VER_DASHBOARD"],
         },
