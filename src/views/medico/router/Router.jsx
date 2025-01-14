@@ -3,15 +3,15 @@ import {lazy} from "react";
 export const routesMedico = [
     {
         path: "dashboard",
-        name: "Inicio",
+        name: "Dashboard",
         meta: {
             title: "Panel administrador",
             icon: "dashboard",
-            requiresAuth: true,
+            requiresAuth: false,
             show: true,
             canAccess: ["VER_DASHBOARD"],
         },
-        Component: lazy(async () => await import("@/modules/admin/home/pages/DashboardAdmin.tsx")),
+        Component: lazy(async () => await import("../dashboard/dashboard")),
     },
     {
         path: "perfil",
@@ -23,7 +23,7 @@ export const routesMedico = [
             show: false,
             canAccess: ["VER_DASHBOARD"],
         },
-        Component: lazy(async () => await import("../medico/perfil/perfil")),
+        Component: lazy(async () => await import("../perfil/perfil")),
     },
     {
         path: "proximas-citas",
@@ -35,7 +35,7 @@ export const routesMedico = [
             show: false,
             canAccess: ["VER_DASHBOARD"],
         },
-        Component: lazy(async () => await import("../medico/citas/proximasCitas")),
+        Component: lazy(async () => await import("../citas/proximasCitas")),
     },
     {
         path: "citas-atendidas",
@@ -47,7 +47,7 @@ export const routesMedico = [
             show: false,
             canAccess: ["VER_DASHBOARD"],
         },
-        Component: lazy(async () => await import("../medico/citas/citasAtendidas")),
+        Component: lazy(async () => await import("../citas/citasAtendidas")),
     },
     {
         path: "calificacion",
@@ -59,7 +59,7 @@ export const routesMedico = [
             show: false,
             canAccess: ["VER_DASHBOARD"],
         },
-        Component: lazy(async () => await import("../medico/calificacion/calificacion")),
+        Component: lazy(async () => await import("../calificacion/calificacion")),
     },
     {
         path: "*",
@@ -69,7 +69,8 @@ export const routesMedico = [
             icon: "error",
             requiresAuth: true,
             show: false,
-            canAccess: ["VER_DASHBOARD"],
+            canAccess: true,
         },
+        Component: lazy(async () => await import("../../NoEncontrado")),
     }
 ];
