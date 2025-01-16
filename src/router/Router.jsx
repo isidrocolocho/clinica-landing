@@ -1,35 +1,10 @@
 import {routesMedico} from "../views/medico/router/Router";
 import {routesPaciente} from "../views/paciente/router/Router";
 import {routesLanding} from "../views/landing/router/Router";
-// import Navbar from "../views/partials/Navbar";
-// import Footer from "../views/partials/Footer";
-// import Home from "../views/landing/home/Home";
-// import AboutUs from "../views/landing/AboutUs/AboutUs";
-// import Login from "../views/landing/login/login";
-// import Servicios from "../views/landing/Servicios/Servicios";
-// import Registro from "../views/landing/registro/registro";
-
-
 import {Fragment, Suspense, lazy} from "react";
 import {Outlet, Route} from "react-router-dom";
 import LoaderSuspenseComponent from "../components/core/LoaderComponent.jsx";
 
-
-// const Router = () => {
-//     return(
-//         <> 
-//             <Navbar/>
-//             <Routes>
-//                 <Route path="/" element={<Home />} />
-//                 <Route path="/somos" element={<AboutUs />} />
-//                 <Route path="/login" element={<Login />} />
-//                 <Route path="/servicios" element={<Servicios />} />
-//                 <Route path="/registro" element={<Registro />} />
-//             </Routes>
-//             <Footer/> 
-//         </>
-//     )
-// }
 
 const renderRoute = (route, index) => {
     const Component = route.Component || Fragment;
@@ -66,6 +41,8 @@ export const routes = [
         Layout: lazy(() => import(/* webpackChunkName: "LazyLayoutPublic" */ '../layouts/client/Layout')),
         children: [
             ...routesLanding,
+            ...routesMedico,
+            ...routesPaciente,
         ],
     },
     // Rutas protegidas
