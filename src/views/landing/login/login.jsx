@@ -5,13 +5,16 @@ import { Link } from "react-router-dom";
 
 export default function login() {
     return (
-        <div className="flex h-screen">
+        <div className="flex flex-col md:flex-row h-screen">
             {/* Imagen del lado izquierdo */}
-            <div className="w-1/2 bg-cover bg-center" style={{ backgroundImage: "url('/images/Diseño_Login.jpg')" }}></div>
+            <div 
+                className="hidden md:block md:w-1/2 bg-cover bg-center"
+                style={{ backgroundImage: "url('/images/Diseño_Login.jpg')" }}
+            ></div>
 
             {/* Sección del formulario de login */}
-            <div className="w-1/2 flex items-center justify-center bg-white">
-                <div className="w-full max-w-md mx-auto px-8">
+            <div className="w-full md:w-1/2 flex items-center justify-center bg-white">
+                <div className="w-full max-w-md mx-auto px-6 sm:px-8">
                     <h2 className="text-2xl font-bold text-center mb-6">Iniciar Sesión</h2>
                     <form>
                         <div className="mb-4">
@@ -54,3 +57,4 @@ export default function login() {
         </div>
     );
 }
+
