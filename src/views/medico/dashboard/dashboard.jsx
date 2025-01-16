@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Route, Routes, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-// Componente de Login
-function Login() {
+export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
@@ -18,40 +17,6 @@ function Login() {
     }
   };
 
-  return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <form
-        className="bg-white p-6 rounded-md shadow-md"
-        onSubmit={handleLogin}
-      >
-        <h1 className="text-2xl font-bold mb-4">Iniciar Sesión</h1>
-        <input
-          type="email"
-          placeholder="Correo electrónico"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          className="w-full p-2 mb-4 border border-gray-300 rounded-md"
-        />
-        <input
-          type="password"
-          placeholder="Contraseña"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          className="w-full p-2 mb-4 border border-gray-300 rounded-md"
-        />
-        <button
-          type="submit"
-          className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 w-full"
-        >
-          Iniciar Sesión
-        </button>
-      </form>
-    </div>
-  );
-}
-
-// Componente de Dashboard
-function Dashboard() {
   return (
     <div className="flex h-screen">
       {/* Menú lateral */}
@@ -78,12 +43,12 @@ function Dashboard() {
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-6">
             Nuestros servicios
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="text-center">
               <img
                 src="/images/dermatologia.jpg"
                 alt="Dermatología"
-                className="rounded-lg mx-auto mb-2 shadow-lg"
+                className="rounded-lg mx-auto mb-2 shadow-lg w-full"
               />
               <p className="font-medium">Dermatología</p>
             </div>
@@ -91,7 +56,7 @@ function Dashboard() {
               <img
                 src="/images/cardiologia.jpg"
                 alt="Cardiología"
-                className="rounded-lg mx-auto mb-2 shadow-lg"
+                className="rounded-lg mx-auto mb-2 shadow-lg w-full"
               />
               <p className="font-medium">Cardiología</p>
             </div>
@@ -99,7 +64,7 @@ function Dashboard() {
               <img
                 src="/images/nutricion.jpg"
                 alt="Nutrición"
-                className="rounded-lg mx-auto mb-2 shadow-lg"
+                className="rounded-lg mx-auto mb-2 shadow-lg w-full"
               />
               <p className="font-medium">Nutrición</p>
             </div>
@@ -107,7 +72,7 @@ function Dashboard() {
               <img
                 src="/images/odontologia.jpg"
                 alt="Odontología"
-                className="rounded-lg mx-auto mb-2 shadow-lg"
+                className="rounded-lg mx-auto mb-2 shadow-lg w-full"
               />
               <p className="font-medium">Odontología</p>
             </div>
@@ -119,12 +84,12 @@ function Dashboard() {
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-6">
             Nuestro equipo
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             <div className="text-center">
               <img
                 src="/images/doctor1.jpg"
                 alt="Dr. Mario Argueta"
-                className="rounded-full mx-auto mb-2 shadow-lg"
+                className="rounded-full mx-auto mb-2 shadow-lg w-32 h-32 object-cover"
               />
               <p className="font-medium">Dr. Mario Argueta</p>
               <p className="text-sm">Especialista en cardiología</p>
@@ -133,7 +98,7 @@ function Dashboard() {
               <img
                 src="/images/doctor2.jpg"
                 alt="Dra. Jessica Moran"
-                className="rounded-full mx-auto mb-2 shadow-lg"
+                className="rounded-full mx-auto mb-2 shadow-lg w-32 h-32 object-cover"
               />
               <p className="font-medium">Dra. Jessica Moran</p>
               <p className="text-sm">Especialista en nutrición</p>
@@ -142,7 +107,7 @@ function Dashboard() {
               <img
                 src="/images/doctor3.jpg"
                 alt="Dr. Luis López"
-                className="rounded-full mx-auto mb-2 shadow-lg"
+                className="rounded-full mx-auto mb-2 shadow-lg w-32 h-32 object-cover"
               />
               <p className="font-medium">Dr. Luis López</p>
               <p className="text-sm">Especialista en dermatología</p>
@@ -153,17 +118,3 @@ function Dashboard() {
     </div>
   );
 }
-
-// Componente principal de la aplicación
-function App() {
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-      </Routes>
-    </Router>
-  );
-}
-
-export default App;
