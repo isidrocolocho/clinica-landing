@@ -41,8 +41,6 @@ export const routes = [
         Layout: lazy(() => import(/* webpackChunkName: "LazyLayoutPublic" */ '../layouts/client/Layout')),
         children: [
             ...routesLanding,
-            ...routesMedico,
-            ...routesPaciente,
         ],
     },
     // Rutas protegidas

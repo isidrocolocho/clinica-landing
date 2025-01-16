@@ -13,7 +13,10 @@ export const getUsers = async (page = 1, perPage = 10) => {
 }
 
 export const login = async (email, password) => {
-    return await network.post('public/auth/iniciar-sesion', {email, password});
+    return await network.post('/auth/login', {email, password});
+}
+export const register = async (dataToSend) => {
+    return await network.post('/auth/register', dataToSend);
 }
 
 export const checkStatus = async (refresh_token) => {
