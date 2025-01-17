@@ -1,49 +1,60 @@
 'use client'
 
-import  Button  from "../../../components/ui/botton"
-import { Input } from "../../../components/ui/input"
+import React from 'react';
 import { Link } from "react-router-dom";
 
-export default function Login() {
-  return (
-    <div className="min-h-screen bg-[#E6F4F1]">
-      <div className="max-w-md mx-auto mt-16 p-8 bg-white rounded-lg shadow-lg">
-        <h2 className="text-2xl font-bold mb-6 text-center">Iniciar Sesión</h2>
-        <form className="space-y-4">
-          <div>
-            <label htmlFor="usuario" className="block text-sm font-medium text-gray-700">
-              Usuario
-            </label>
-            <Input
-              id="usuario"
-              type="text"
-              required
-              className="mt-1"
-            />
-          </div>
-          <div>
-            <label htmlFor="password" className="block text-sm font-medium text-gray-700">
-              Contraseña
-            </label>
-            <Input
-              id="password"
-              type="password"
-              required
-              className="mt-1"
-            />
-          </div>
-          <Button className="w-full bg-gradient-to-r from-[#2A9D8F] to-[#1e3a8a]">
-            Iniciar Sesión
-          </Button>
-        </form>
-        <p className="mt-4 text-center text-sm text-gray-600">
-          ¿No tienes cuenta?{' '}
-          <Link href="/registro" className="text-[#2A9D8F] hover:underline">
-            Regístrate
-          </Link>
-        </p>
-      </div>
-    </div>
-  )
+export default function login() {
+    return (
+        <div className="flex flex-col md:flex-row h-screen">
+            {/* Imagen del lado izquierdo */}
+            <div 
+                className="hidden md:block md:w-1/2 bg-cover bg-center"
+                style={{ backgroundImage: "url('/images/Diseño_Login.jpg')" }}
+            ></div>
+
+            {/* Sección del formulario de login */}
+            <div className="w-full md:w-1/2 flex items-center justify-center bg-white">
+                <div className="w-full max-w-md mx-auto px-6 sm:px-8">
+                    <h2 className="text-2xl font-bold text-center mb-6">Iniciar Sesión</h2>
+                    <form>
+                        <div className="mb-4">
+                            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="username">
+                                Usuario
+                            </label>
+                            <input
+                                className="w-full border-b-2 border-blue-600 focus:outline-none focus:border-blue-800"
+                                id="username"
+                                type="text"
+                                placeholder="Ingrese su usuario"
+                            />
+                        </div>
+                        <div className="mb-6">
+                            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="password">
+                                Contraseña
+                            </label>
+                            <input
+                                className="w-full border-b-2 border-blue-600 focus:outline-none focus:border-blue-800"
+                                id="password"
+                                type="password"
+                                placeholder="Ingrese su contraseña"
+                            />
+                        </div>
+                        <button
+                            type="submit"
+                            className="w-full bg-gradient-to-r from-blue-500 to-blue-700 text-white py-2 px-4 rounded-md hover:from-blue-600 hover:to-blue-800"
+                        >
+                            Iniciar Sesión
+                        </button>
+                    </form>
+                    <p className="text-center text-sm text-gray-600 mt-4">
+                        ¿No tienes cuenta?{" "}
+                        <Link to="/registro" className="text-blue-500 hover:underline">
+                            Regístrate.
+                        </Link>
+                    </p>
+                </div>
+            </div>
+        </div>
+    );
 }
 
