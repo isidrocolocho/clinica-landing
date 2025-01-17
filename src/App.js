@@ -15,7 +15,6 @@ function App() {
                     {renderRoutesGlobal(routes)}
                 </Routes>
             </BrowserRouter>
-            
         </>
   );
 }

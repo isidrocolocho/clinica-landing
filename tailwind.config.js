@@ -10,6 +10,7 @@ module.exports = {
         "celeste-aqua": "#89DEE2",
         "azul-navy": "#10217D",
         "verde-aqua": "#009387",
+        "azul-celeste":"#16C2D5",
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'], 
