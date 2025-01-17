@@ -1,45 +1,105 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faBars,
+  faBook,
+  faCalendarPlus,
+  faHistory,
+  faCalendarAlt,
+  faSignOutAlt,
+  faCog,
+} from "@fortawesome/free-solid-svg-icons";
 
 export default function Login() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [isMenuOpen, setIsMenuOpen] = useState(true); // Controla la visibilidad del menú
   const navigate = useNavigate();
 
-  const handleLogin = (e) => {
-    e.preventDefault();
-
-    // Simulación de autenticación
-    if (email === "user@example.com" && password === "password123") {
-      navigate("/dashboard"); // Redirige al Dashboard
-    } else {
-      alert("Credenciales incorrectas");
-    }
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
 
   return (
-    <div className="flex h-screen">
+    <div
+      className="flex min-h-screen overflow-hidden"
+      style={{
+        backgroundImage: "url('/images/sectionServicios.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
       {/* Menú lateral */}
-      <aside className="bg-teal-600 w-16 md:w-20 flex flex-col items-center py-4">
-        <div className="mb-6">
-          <button className="text-white">
-            <i className="fas fa-bars text-lg md:text-xl"></i>
+      <aside
+        className={`bg-teal-600 text-white flex flex-col justify-between py-6 transition-all duration-300 ${
+          isMenuOpen ? "w-64" : "w-16"
+        }`}
+      >
+        <div>
+          {/* Botón para abrir/cerrar el menú */}
+          <button
+            className="text-white px-4 py-2"
+            onClick={toggleMenu}
+            aria-label="Toggle menu"
+          >
+            <FontAwesomeIcon icon={faBars} className="text-2xl" />
           </button>
+
+          {/* Opciones del menú */}
+          <ul className="mt-8 space-y-6">
+            <li
+              className="flex items-center px-4 space-x-4 hover:bg-teal-700 cursor-pointer"
+              onClick={() => navigate("/catalogo")}
+            >
+              <FontAwesomeIcon icon={faBook} className="text-2xl" />
+              {isMenuOpen && <span className="text-lg">Catálogo</span>}
+            </li>
+            <li
+              className="flex items-center px-4 space-x-4 hover:bg-teal-700 cursor-pointer"
+              onClick={() => navigate("/crear-cita")}
+            >
+              <FontAwesomeIcon icon={faCalendarPlus} className="text-2xl" />
+              {isMenuOpen && <span className="text-lg">Crear cita</span>}
+            </li>
+            <li
+              className="flex items-center px-4 space-x-4 hover:bg-teal-700 cursor-pointer"
+              onClick={() => navigate("/citas-anteriores")}
+            >
+              <FontAwesomeIcon icon={faHistory} className="text-2xl" />
+              {isMenuOpen && <span className="text-lg">Citas Anteriores</span>}
+            </li>
+            <li
+              className="flex items-center px-4 space-x-4 hover:bg-teal-700 cursor-pointer"
+              onClick={() => navigate("/calendario")}
+            >
+              <FontAwesomeIcon icon={faCalendarAlt} className="text-2xl" />
+              {isMenuOpen && <span className="text-lg">Calendario</span>}
+            </li>
+          </ul>
         </div>
-        <div className="flex flex-col gap-6">
-          <button className="text-white">
-            <i className="fas fa-user text-lg md:text-xl"></i>
-          </button>
-          <button className="text-white">
-            <i className="fas fa-door-open text-lg md:text-xl"></i>
-          </button>
+
+        {/* Perfil y configuraciones */}
+        <div className="px-4">
+          <div className="flex items-center space-x-4 mb-6">
+            <div className="w-12 h-12 bg-gray-300 rounded-full"></div>
+            {isMenuOpen && <p className="font-semibold">Juan Oscar</p>}
+          </div>
+          <div className="flex justify-between">
+            <button className="text-white">
+              <FontAwesomeIcon icon={faSignOutAlt} className="text-xl" />
+            </button>
+            <button className="text-white">
+              <FontAwesomeIcon icon={faCog} className="text-xl" />
+            </button>
+          </div>
         </div>
       </aside>
 
       {/* Contenido principal */}
-      <main className="flex-1 bg-white p-6 md:p-10">
+      <main
+        className={`flex-1 bg-white bg-opacity-75 p-6 md:p-10 flex flex-col`}
+      >
         {/* Sección de servicios */}
-        <section className="mb-12">
+        <section className="flex-grow mb-12">
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-6">
             Nuestros servicios
           </h2>
