@@ -5,10 +5,11 @@ export default function Home() {
   return (
     <div>
       {/* Sección principal */}
-      <section className="max-w-7xl mx-auto px-4 py-12">
-        <div className="grid md:grid-cols-2 gap-8 items-center">
-          <div className="md:pl-20">
-            <h1 className="text-5xl sm:text-3xl font-bold mb-4">
+      <section className="h-screen max-w-7xl mx-auto px-4 py-12 flex flex-col justify-center">
+        <div className="grid grid-rows-2 md:grid-cols-2 md:grid-rows-1 gap-8 items-center h-full">
+          {/* Texto en la primera fila */}
+          <div className="md:pl-20 flex flex-col justify-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">
               Tu salud, <br />
               <span className="text-verde-aqua font-black italic">nuestra prioridad.</span>
             </h1>
@@ -24,7 +25,9 @@ export default function Home() {
               </button>
             </div>
           </div>
-          <div className="relative h-64 sm:h-48">
+
+          {/* Imagen en la segunda fila */}
+          <div className="relative h-64 md:h-full flex items-center justify-center">
             <img
               src="/images/estetoscopio.jpg"
               alt="Medical stethoscope heart"
