@@ -95,9 +95,7 @@ export default function Login() {
       </aside>
 
       {/* Contenido principal */}
-      <main
-        className={`flex-1 bg-white bg-opacity-75 p-6 md:p-10 flex flex-col`}
-      >
+      <main className={`flex-1 bg-white bg-opacity-75 p-6 md:p-10 flex flex-col`}>
         {/* Sección de servicios */}
         <section className="flex-grow mb-12">
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-6">
@@ -108,15 +106,15 @@ export default function Login() {
               <img
                 src="/images/dermatologia.jpg"
                 alt="Dermatología"
-                className="rounded-lg mx-auto mb-2 shadow-lg w-full"
+                className="rounded-lg mx-auto mb-2 shadow-lg w-full h-48 object-cover"
               />
               <p className="font-medium">Dermatología</p>
             </div>
             <div className="text-center">
               <img
-                src="/images/cardiologia.jpeg" 
+                src="/images/cardiologia.jpeg"
                 alt="Cardiología"
-                className="rounded-lg mx-auto mb-2 shadow-lg w-full"
+                className="rounded-lg mx-auto mb-2 shadow-lg w-full h-48 object-cover"
               />
               <p className="font-medium">Cardiología</p>
             </div>
@@ -124,7 +122,7 @@ export default function Login() {
               <img
                 src="/images/nutricion.jpeg"
                 alt="Nutrición"
-                className="rounded-lg mx-auto mb-2 shadow-lg w-full"
+                className="rounded-lg mx-auto mb-2 shadow-lg w-full h-48 object-cover"
               />
               <p className="font-medium">Nutrición</p>
             </div>
@@ -132,7 +130,7 @@ export default function Login() {
               <img
                 src="/images/odontologia.jpeg"
                 alt="Odontología"
-                className="rounded-lg mx-auto mb-2 shadow-lg w-full"
+                className="rounded-lg mx-auto mb-2 shadow-lg w-full h-48 object-cover"
               />
               <p className="font-medium">Odontología</p>
             </div>
