@@ -55,7 +55,7 @@ export default function Login() {
             </li>
             <li
               className="flex items-center px-4 space-x-4 hover:bg-teal-700 cursor-pointer"
-              onClick={() => navigate("/crear-cita")}
+              onClick={() => navigate("/crear-citas")}
             >
               <FontAwesomeIcon icon={faCalendarPlus} className="text-2xl" />
               {isMenuOpen && <span className="text-lg">Crear cita</span>}
