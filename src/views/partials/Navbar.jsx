@@ -3,11 +3,7 @@ import { Link } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
 
 const Navbar = () => {
-<<<<<<< Updated upstream
   const [isOpen, setIsOpen] = useState(false);
-=======
-    //const [isOpen, setIsOpen] = useState(false)
->>>>>>> Stashed changes
 
   return (
     <header className="bg-[#89DEE2]">
