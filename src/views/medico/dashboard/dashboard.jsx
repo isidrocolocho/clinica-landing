@@ -114,7 +114,7 @@ export default function Login() {
             </div>
             <div className="text-center">
               <img
-                src="/images/cardiologia.jpg"
+                src="/images/cardiologia.jpeg" 
                 alt="Cardiología"
                 className="rounded-lg mx-auto mb-2 shadow-lg w-full"
               />
@@ -122,7 +122,7 @@ export default function Login() {
             </div>
             <div className="text-center">
               <img
-                src="/images/nutricion.jpg"
+                src="/images/nutricion.jpeg"
                 alt="Nutrición"
                 className="rounded-lg mx-auto mb-2 shadow-lg w-full"
               />
@@ -130,7 +130,7 @@ export default function Login() {
             </div>
             <div className="text-center">
               <img
-                src="/images/odontologia.jpg"
+                src="/images/odontologia.jpeg"
                 alt="Odontología"
                 className="rounded-lg mx-auto mb-2 shadow-lg w-full"
               />
@@ -147,7 +147,7 @@ export default function Login() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             <div className="text-center">
               <img
-                src="/images/doctor1.jpg"
+                src="/images/mario.jpeg"
                 alt="Dr. Mario Argueta"
                 className="rounded-full mx-auto mb-2 shadow-lg w-32 h-32 object-cover"
               />
@@ -156,7 +156,7 @@ export default function Login() {
             </div>
             <div className="text-center">
               <img
-                src="/images/doctor2.jpg"
+                src="/images/jessica.jpeg"
                 alt="Dra. Jessica Moran"
                 className="rounded-full mx-auto mb-2 shadow-lg w-32 h-32 object-cover"
               />
@@ -165,7 +165,7 @@ export default function Login() {
             </div>
             <div className="text-center">
               <img
-                src="/images/doctor3.jpg"
+                src="/images/luis.jpeg"
                 alt="Dr. Luis López"
                 className="rounded-full mx-auto mb-2 shadow-lg w-32 h-32 object-cover"
               />

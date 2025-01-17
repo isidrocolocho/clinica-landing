@@ -150,7 +150,7 @@ export default function AboutUs() {
         {/* Card 4 */}
         <div
           className="flex justify-center items-end row-start-3 col-start-2 lg:row-start-2 lg:col-start-6 hover:scale-105 transition-transform duration-300 cursor-pointer overflow-hidden"
-          onClick={() => window.open("https://www.linkedin.com/in/karla", "_blank")}
+          onClick={() => window.open("https://www.linkedin.com/in/karla-rosales-manzano", "_blank")}
         >
           <div className="w-40 h-80 rounded-t-[100px] bg-azul-celeste flex justify-center items-end overflow-hidden">
             <img
