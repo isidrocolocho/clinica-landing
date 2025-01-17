@@ -6,7 +6,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="bg-[#89DEE2]">
+    <header className="bg-celeste-aqua">
       <div className="max-w-7xl mx-auto flex justify-between items-center py-4 px-6">
         {/* Logo */}
         <div>
@@ -23,19 +23,19 @@ const Navbar = () => {
         <nav className="hidden md:flex space-x-8">
           <Link 
             to="/" 
-            className="text-[#00214d] font-bold hover:text-cyan-600"
+            className="text-azul-navy font-bold hover:text-cyan-600"
           >
             Inicio
           </Link>
           <Link 
             to="/somos" 
-            className="text-[#00214d] font-bold hover:text-cyan-600"
+            className="text-azul-navy font-bold hover:text-cyan-600"
           >
             ¿Quiénes somos?
           </Link>
           <Link 
             to="/servicios" 
-            className="text-[#00214d] font-bold hover:text-cyan-600"
+            className="text-azul-navy font-bold hover:text-cyan-600"
           >
             Servicios
           </Link>
@@ -51,7 +51,7 @@ const Navbar = () => {
           </Link>
           <Link 
             to="/login" 
-            className="bg-[#1C6631] text-white px-4 py-2 rounded-md hover:bg-[#154d25]"
+            className="bg-verde-musgo text-white px-4 py-2 rounded-md hover:bg-[#154d25]"
           >
             Iniciar Sesión
           </Link>
@@ -102,7 +102,7 @@ const Navbar = () => {
             </Link>
             <Link 
               to="/login" 
-              className="bg-[#28312a] text-white px-4 py-2 rounded-md text-center hover:bg-[#154d25]"
+              className="bg-verde-musgo text-white px-4 py-2 rounded-md text-center hover:bg-[#154d25] !important"
               onClick={() => setIsOpen(false)}
             >
               Iniciar Sesión

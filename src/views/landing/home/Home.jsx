@@ -6,7 +6,7 @@ export default function Home() {
       <section className="max-w-7xl mx-auto px-4 py-12">
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div className="md:pl-20">
-            <h1 className="text-4xl sm:text-3xl font-bold mb-4">
+            <h1 className="text-5xl sm:text-3xl font-bold mb-4">
               Tu salud, <br />
               <span className="text-verde-aqua font-black italic">nuestra prioridad.</span>
             </h1>
