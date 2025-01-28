@@ -50,8 +50,8 @@ export const routesPaciente = [
         Component: lazy(async () => await import("../Citas/CrearCitas")),
     },
     {
-        path: "perfil",
-        name: "Perfil",
+        path: "perfilpaciente",
+        name: "Perfilpaciente",
         // meta: {
         //     title: "Perfil",
         //     icon: "dashboard",
@@ -59,7 +59,7 @@ export const routesPaciente = [
         //     show: false,
         //     canAccess: ["VER_DASHBOARD"],
         // },
-        Component: lazy(async () => await import("../perfil/perfil")),
+        Component: lazy(async () => await import("../perfil/perfilpaciente")),
     },
     {
         path: "*",
